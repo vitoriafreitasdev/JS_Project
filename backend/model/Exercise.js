@@ -5,26 +5,26 @@ const {Schema} = mongoose
 const ExerciseSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     duration: {
         type: Number,
-        required: true
-    }, 
+        required: true,
+    },
     reps: {
-        types: Number,
-        required: true
+        type: Number,
+        required: true,
     },
     weight: {
-        type: Number,
-        required: true
+        type: String,
+        required: true,
     },
     ownerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 })
 
-const ExerciseModel = mongoose.model("Exercise", ExerciseSchema)
+const Exercise = mongoose.model("Exercise", ExerciseSchema)
 
 module.exports = {
-    ExerciseModel,
-    ExerciseSchema
+    Exercise,
+    ExerciseSchema,
 }

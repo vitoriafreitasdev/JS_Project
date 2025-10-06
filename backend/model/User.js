@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-
+const {ExerciseSchema} = require("./Exercise")
 const {Schema} = mongoose 
 
 const userSchema = new Schema({
@@ -15,7 +15,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    exercises: [{type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}]
+    exercises: [ExerciseSchema]
     
 }, {timestamps: true})
 

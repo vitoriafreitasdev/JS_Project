@@ -1,6 +1,6 @@
 const router = require("express").Router()
-const siteServer = require("./usersRouter")
+const userServer = require("./usersRouter")
 
-// router.use("/", siteServer)
+router.use("/", userServer)
 
 module.exports = router

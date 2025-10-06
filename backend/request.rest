@@ -1,0 +1,52 @@
+POST http://localhost:3000/user/cadastro
+Content-Type: application/json
+
+{
+    "name": "vitoria",
+    "email": "vitoria@gmail.com",
+    "password": "12345"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "vitoria@gmail.com",
+    "password": "12345" 
+}
+
+###
+
+GET http://localhost:3000/user/68e420c378f67a48202220d9
+
+###
+POST http://localhost:3000/user/addExercise/68e420c378f67a48202220d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTQyMGMzNzhmNjdhNDgyMDIyMjBkOSIsImlhdCI6MTc1OTc4MTEzMn0.XYGb_eRWEHshtd0cd3QNxJRt4qACL-4RbvCQjTRHK0s
+Content-Type: application/json
+
+{
+    "name": "desenvolvimento halter",
+    "duration": 12,
+    "reps": 6,
+    "weight": "40 kilos"
+}
+
+
+###
+DELETE http://localhost:3000/user/delete/68e3c96ed57c373805050cc2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTJiY2E5NjQyNDlhNDJhYzEyNDAzMSIsImlhdCI6MTc1OTc2MDAwMn0.Ru_RZWVbtU_vYTMXUaddTMymScgc3kEk2ORp1EPn960
+Content-Type: application/json
+
+###
+PUT http://localhost:3000/user/edit/68e4211b3df7f11f6bdd65d8 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTJiY2E5NjQyNDlhNDJhYzEyNDAzMSIsImlhdCI6MTc1OTc4MDYzNn0.ZIRq1bY5OOCVbQTOWfi_9NlUPscVOdhr7vvA6HOzloQ
+Content-Type: application/json
+
+{
+    "name": "desenvolvimento halter",
+    "duration": 10,
+    "reps": 6,
+    "weight": "14 kilos"
+}
