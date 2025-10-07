@@ -19,34 +19,34 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/user/68e420c378f67a48202220d9
+GET http://localhost:3000/user/68e57cb2cf3ad2ac86f4caba
 
 ###
-POST http://localhost:3000/user/addExercise/68e420c378f67a48202220d9
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTQyMGMzNzhmNjdhNDgyMDIyMjBkOSIsImlhdCI6MTc1OTc4MTEzMn0.XYGb_eRWEHshtd0cd3QNxJRt4qACL-4RbvCQjTRHK0s
+POST http://localhost:3000/user/addExercise/68e57cb2cf3ad2ac86f4caba
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
 Content-Type: application/json
 
 {
-    "name": "desenvolvimento halter",
-    "duration": 12,
-    "reps": 6,
-    "weight": "40 kilos"
+    "name": "Desenvolvimento com Halter",
+    "duration": 10,
+    "reps": 8,
+    "weight": "12 kilos"
 }
 
 
 ###
-DELETE http://localhost:3000/user/delete/68e3c96ed57c373805050cc2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTJiY2E5NjQyNDlhNDJhYzEyNDAzMSIsImlhdCI6MTc1OTc2MDAwMn0.Ru_RZWVbtU_vYTMXUaddTMymScgc3kEk2ORp1EPn960
+DELETE http://localhost:3000/user/delete/68e57aeb28e86464e0051816
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
 Content-Type: application/json
 
 ###
-PUT http://localhost:3000/user/edit/68e4211b3df7f11f6bdd65d8 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTJiY2E5NjQyNDlhNDJhYzEyNDAzMSIsImlhdCI6MTc1OTc4MDYzNn0.ZIRq1bY5OOCVbQTOWfi_9NlUPscVOdhr7vvA6HOzloQ
+PUT http://localhost:3000/user/edit/68e57f0d4098cd507a539064 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
 Content-Type: application/json
 
 {
-    "name": "desenvolvimento halter",
+    "name": "Desenvolvimento com Halter",
     "duration": 10,
-    "reps": 6,
+    "reps": 5,
     "weight": "14 kilos"
 }

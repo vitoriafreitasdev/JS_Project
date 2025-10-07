@@ -107,6 +107,7 @@ const UserController = {
             const deleted = await Exercise.findByIdAndDelete(exerciseId)
 
             res.status(200).json({msg: "Deletado com sucesso.", user, deleted})
+
             
         } catch (error) {
             console.log(error)
@@ -128,8 +129,8 @@ const UserController = {
             }
            
             const uptade = await Exercise.findByIdAndUpdate(exerciseId, exerciseUptate, {new: true})
-            const userUptade = await User.findOneAndUpdate({_id: userId, "exercises._id": exerciseId}, {$set: {exerciseUptate}}, {new: true})
-
+            const exercises = await Exercise.find()
+            const userUptade = await User.findByIdAndUpdate(userId, {exercises: exercises}, {new: true})
 
             res.status(200).json({msg: "Atualizado com sucesso.", uptade, userUptade})
 
@@ -139,7 +140,7 @@ const UserController = {
         }
     }
 
-    /* arrumar o uptade, userUptade esta como null*/
+    /* fazer testes, para ver se ta tudo funcionando realmente*/
 
 }
 
