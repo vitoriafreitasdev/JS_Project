@@ -7,7 +7,7 @@ const ExerciseSchema = new Schema({
         type: String,
         required: true,
     },
-    duration: {
+    series: {
         type: Number,
         required: true,
     },

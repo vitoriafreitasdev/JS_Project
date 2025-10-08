@@ -77,12 +77,12 @@ const UserController = {
     },
     addExercise: async (req, res) => {
         try {
-            const {name, duration, reps, weight} = req.body
+            const {name, series, reps, weight} = req.body
             const userId = req.params.id
             
             const exercise = {
                 name: name,
-                duration: duration,
+                series: series,
                 reps: reps,
                 weight: weight,
                 ownerId: userId
@@ -118,18 +118,18 @@ const UserController = {
         try {
             const exerciseId = req.params.id 
             const userId = req.userId 
-            const {name, duration, reps, weight} = req.body
+            const {name, series, reps, weight} = req.body
 
             const exerciseUptate = {
                 name: name,
-                duration: duration,
+                series: series,
                 reps: reps,
                 weight: weight,
                 ownerId: userId
             }
            
             const uptade = await Exercise.findByIdAndUpdate(exerciseId, exerciseUptate, {new: true})
-            const exercises = await Exercise.find()
+            const exercises = await Exercise.find({ownerId: userId})
             const userUptade = await User.findByIdAndUpdate(userId, {exercises: exercises}, {new: true})
 
             res.status(200).json({msg: "Atualizado com sucesso.", uptade, userUptade})
@@ -139,8 +139,6 @@ const UserController = {
             res.status(422).json({msg: "Algum erro aconteceu, tente novamente."})
         }
     }
-
-    /* fazer testes, para ver se ta tudo funcionando realmente*/
 
 }
 

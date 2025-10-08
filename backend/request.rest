@@ -19,34 +19,34 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/user/68e57cb2cf3ad2ac86f4caba
+GET http://localhost:3000/user/68e6a284c328297fe613e1d1
 
 ###
-POST http://localhost:3000/user/addExercise/68e57cb2cf3ad2ac86f4caba
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
+POST http://localhost:3000/user/addExercise/68e6a284c328297fe613e1d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
 Content-Type: application/json
 
 {
-    "name": "Desenvolvimento com Halter",
-    "duration": 10,
+    "name": "Elevação lateral",
+    "series": 2,
     "reps": 8,
-    "weight": "12 kilos"
+    "weight": "7 kilos"
 }
 
 
 ###
-DELETE http://localhost:3000/user/delete/68e57aeb28e86464e0051816
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
+DELETE http://localhost:3000/user/delete/68e6a24dc328297fe613e1bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
 Content-Type: application/json
 
 ###
-PUT http://localhost:3000/user/edit/68e57f0d4098cd507a539064 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU3Y2IyY2YzYWQyYWM4NmY0Y2FiYSIsImlhdCI6MTc1OTg3MDEzNH0.HisOfbq6U-lBPHuGu3cTfzNTu6l-Q7GEEhKTLE48daI
+PUT http://localhost:3000/user/edit/68e6a330c328297fe613e1e3 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
 Content-Type: application/json
 
 {
-    "name": "Desenvolvimento com Halter",
-    "duration": 10,
-    "reps": 5,
-    "weight": "14 kilos"
+    "name": "Elevação lateral",
+    "series": 2,
+    "reps": 6,
+    "weight": "8 kilos"
 }
