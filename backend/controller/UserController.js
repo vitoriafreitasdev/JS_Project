@@ -28,8 +28,9 @@ const UserController = {
             }
 
             const response = await User.create(user)
-            
-            res.status(201).json({msg: "Criado com sucesso", response})
+            const id = response._id
+            const token = jwt.sign({id: id}, secret)
+            res.status(201).json({msg: "Criado com sucesso", response, token})
 
         } catch (error) {
             console.log(error)
@@ -77,7 +78,7 @@ const UserController = {
     },
     addExercise: async (req, res) => {
         try {
-            const {name, series, reps, weight} = req.body
+            const {name, series, reps, weight, day} = req.body
             const userId = req.params.id
             
             const exercise = {
@@ -85,6 +86,7 @@ const UserController = {
                 series: series,
                 reps: reps,
                 weight: weight,
+                day: day,
                 ownerId: userId
             }
 
@@ -118,13 +120,14 @@ const UserController = {
         try {
             const exerciseId = req.params.id 
             const userId = req.userId 
-            const {name, series, reps, weight} = req.body
+            const {name, series, reps, weight, day} = req.body
 
             const exerciseUptate = {
                 name: name,
                 series: series,
                 reps: reps,
                 weight: weight,
+                day: day,
                 ownerId: userId
             }
            

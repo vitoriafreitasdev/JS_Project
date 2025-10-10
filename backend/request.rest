@@ -2,8 +2,8 @@ POST http://localhost:3000/user/cadastro
 Content-Type: application/json
 
 {
-    "name": "vitoria",
-    "email": "vitoria@gmail.com",
+    "name": "alex",
+    "email": "alex@gmail.com",
     "password": "12345"
 }
 
@@ -13,40 +13,43 @@ POST http://localhost:3000/user/login
 Content-Type: application/json
 
 {
-    "email": "vitoria@gmail.com",
+    "email": "alex@gmail.com",
     "password": "12345" 
 }
 
 ###
 
-GET http://localhost:3000/user/68e6a284c328297fe613e1d1
+GET http://localhost:3000/user/68e9168d0f6cba740beab68b
 
 ###
-POST http://localhost:3000/user/addExercise/68e6a284c328297fe613e1d1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
+POST http://localhost:3000/user/addExercise/68e9168d0f6cba740beab68b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDEwNjEyN30.DzwpyQvl_gHIwkwMjNlM8RKjNGwC054cFs0UWtgYmFc
 Content-Type: application/json
 
 {
-    "name": "Elevação lateral",
+    "name": "elevação frontal",
     "series": 2,
     "reps": 8,
-    "weight": "7 kilos"
+    "weight": "30 kilos",
+    "day": "segunda-feira"
 }
 
 
 ###
-DELETE http://localhost:3000/user/delete/68e6a24dc328297fe613e1bf
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
+DELETE http://localhost:3000/user/delete/68e917cf0f6cba740beab6a4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDEwNjEyN30.DzwpyQvl_gHIwkwMjNlM8RKjNGwC054cFs0UWtgYmFc
 Content-Type: application/json
 
 ###
-PUT http://localhost:3000/user/edit/68e6a330c328297fe613e1e3 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTZhMjg0YzMyODI5N2ZlNjEzZTFkMSIsImlhdCI6MTc1OTk0NTM1NH0.MAyK6jYZwL8zwWXFnSuZSMo3jYF8-rSc72ezmodFLC4
+PUT http://localhost:3000/user/edit/68e916ee0f6cba740beab694 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDEwNjEyN30.DzwpyQvl_gHIwkwMjNlM8RKjNGwC054cFs0UWtgYmFc
 Content-Type: application/json
 
 {
-    "name": "Elevação lateral",
+    "name": "Cruxifo",
     "series": 2,
-    "reps": 6,
-    "weight": "8 kilos"
+    "reps": 9,
+    "weight": "55 kilos",
+    "day": "segunda-feira"
 }
+

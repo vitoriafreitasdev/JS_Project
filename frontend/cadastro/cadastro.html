@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="cadastro.js" defer></script>
+    <script  type="module" src="cadastro.js"></script>
 </head>
 <body>
     <div class="cadastro">
@@ -13,7 +14,7 @@
                 <h1>Cadastro</h1>
                 <div>
                     <p><label for="nameInput">Seu nome: </label></p>
-                    <input type="email" name="nameInput" id="nameInput">
+                    <input type="text" name="nameInput" id="nameInput">
                 </div>
                 <div>
                     <p><label for="emailInput">Seu E-mail: </label></p>
@@ -23,7 +24,7 @@
                     <p><label for="senhaInput">Sua Senha: </label></p>
                     <input type="password" name="senhaInput" id="senhaInput">
                 </div>
-            <input type="submit" id="submitCadastro" value="Entrar">  
+            <button id="submitCadastro" >Cadastrar</button>  
         </form>
      
     </div>
