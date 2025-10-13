@@ -29,7 +29,7 @@ submitCadastro.addEventListener("click", (e) => {
     }
 
     
-// fazer o login
+
     webFetch("/user/cadastro", {
         method: "POST",
         body: JSON.stringify(cadastroForm)
@@ -37,3 +37,6 @@ submitCadastro.addEventListener("click", (e) => {
         localStorage.setItem("token", data.token)
     }).catch(error => console.log(error))
 })
+
+// fazer o login
+// Depois fazer o usuario ser direcionado para outra pagina

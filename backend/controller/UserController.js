@@ -1,3 +1,4 @@
+
 const {User} = require("../model/User")
 const {Exercise} = require("../model/Exercise")
 const bcrypt = require("bcrypt")

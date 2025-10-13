@@ -46,19 +46,19 @@ body{
     margin: 0.5rem;
 }
 
-.formDiv input[type="submit"]{
+.loginForm button{
     background-color: #858f9c;
     color: #fff;
     border: none;
     padding: 0.5rem;
     width: 150px;
     border-radius: 5rem;
-    cursor: pointer;
     margin: 2rem;
     opacity: 1;
+    cursor: pointer;
 }
 
-.formDiv input[type="submit"]:hover{
+.loginForm button{
     opacity: 0.95;
 
 }
