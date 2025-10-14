@@ -1,0 +1,62 @@
+
+body{
+    background-color: #C0BCB5;;
+}
+.userPage-MainDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    padding: 1rem;
+    background-color: #1E2D2F;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.divTreinos {
+    display: flex;
+    flex-wrap: wrap; /* 👉 permite quebrar linha */
+    justify-content: space-between;
+    gap: 20px; /* opcional: espaço entre os blocos */
+}
+
+.divTreinos > div {
+    background-color: #F5F9E9;
+    flex: 1 1 calc(25% - 20px); /* 👉 4 por linha (25% cada, descontando o gap) */
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0.4rem;
+    
+}
+
+.div-BtnAddTreinos{
+    margin: 0.4rem;
+    
+}
+
+.div-BtnAddTreinos button{
+    padding: 0.4rem;
+    color: #868784;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit{
+    background-color: #1E2D2F;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 0.3rem;
+}
+.delete{
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 0.3rem;
+    
+}
