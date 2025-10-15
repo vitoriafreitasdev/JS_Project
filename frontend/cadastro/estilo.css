@@ -1,38 +1,195 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background: url(img/img3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
+    background-position: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
 }
 
-.cadastroForm{
+.cadastroForm {
     display: flex;
-    padding: 1rem;
+    padding: 1.5rem;
     flex-direction: column;
     align-items: center;
-    border-radius: 5px;
-    position: absolute;
-    width: 50vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #b8c5d683;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: rgba(184, 197, 214, 0.9);
     color: #424242;
     font-weight: bolder;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
-
-.cadastroForm input{
-    width: 250px;
-    padding: 0.3rem;
-    margin: 0.5rem;
+.cadastroForm h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 2rem;
+    text-align: center;
 }
 
-#submitCadastro{
-    width: 150px;
-    margin: 0.5rem;
+.input-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.cadastroForm input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.3rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.cadastroForm input:focus {
+    outline: none;
+    border-color: #858f9c;
+    box-shadow: 0 0 5px rgba(133, 143, 156, 0.5);
+    background-color: white;
+}
+
+#submitCadastro {
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem 0;
     border: none;
-    border-radius: 5px;
-    padding: 0.6rem;
+    border-radius: 25px;
+    padding: 0.8rem;
     cursor: pointer;
+    background-color: #858f9c;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#submitCadastro:hover {
+    background-color: #6d7682;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-link {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.login-link a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #858f9c;
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .cadastroForm {
+        padding: 2rem;
+        width: 70%;
+        max-width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .cadastroForm input {
+        width: 300px;
+        padding: 0.8rem;
+    }
+    
+    #submitCadastro {
+        width: 200px;
+        padding: 0.8rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .cadastroForm {
+        width: 40%;
+        max-width: 400px;
+        padding: 2.5rem;
+    }
+    
+    .cadastroForm h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cadastroForm input {
+        width: 280px;
+        padding: 0.9rem;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 360px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .cadastroForm {
+        padding: 1rem;
+        width: 95%;
+        margin: 1rem auto;
+    }
+    
+    .cadastroForm h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cadastroForm input {
+        padding: 0.7rem;
+    }
+    
+    #submitCadastro {
+        padding: 0.7rem;
+        max-width: 180px;
+    }
+}
+
+/* Landscape para celulares */
+@media (max-height: 600px) and (orientation: landscape) {
+    .cadastroForm {
+        margin: 1rem auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .input-group {
+        margin-bottom: 0.5rem;
+    }
+    
+    #submitCadastro {
+        margin: 0.5rem 0;
+    }
 }

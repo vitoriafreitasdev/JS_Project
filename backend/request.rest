@@ -19,11 +19,12 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/user/68e9168d0f6cba740beab68b
+GET http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDU1MjU5MH0.VxaT6HYkXbz-s1gaJT-qk_N0FZerI3wpfmcIhjbTaqU
 
 ###
 POST http://localhost:3000/user/addExercise/68e9168d0f6cba740beab68b
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDEwNjEyN30.DzwpyQvl_gHIwkwMjNlM8RKjNGwC054cFs0UWtgYmFc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDU1MjU5MH0.VxaT6HYkXbz-s1gaJT-qk_N0FZerI3wpfmcIhjbTaqU
 Content-Type: application/json
 
 {

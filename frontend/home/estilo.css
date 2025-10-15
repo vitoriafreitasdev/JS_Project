@@ -1,97 +1,186 @@
-body{
-   /* background-color: #E8E9ED; */
-   background: url(img/img1.jpg);
-   background-size: cover;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.homePage{
+body {
+    background: url(img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.homePage {
     display: flex;
+    flex-direction: column;
     padding: 1rem;
     border-radius: 5px;
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cadastreDiv, .formDiv{
-    height: 65vh;
-    padding: 1rem;
-    
-
+.cadastreDiv, .formDiv {
+    padding: 1.5rem;
+    width: 100%;
 }
 
-.cadastreDiv{
+.cadastreDiv {
     background-color: #B8C5D6;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    order: 2;
 }
 
-.formDiv{
+.formDiv {
     background-color: #fff;
     color: #858f9c;
-    width: 70%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     text-align: center;
     font-weight: bolder;
+    border-radius: 0 0 5px 5px;
+    order: 1;
 }
 
-.formDiv input{
-    width: 250px;
-    padding: 0.2rem;
-    margin: 0.5rem;
+.formDiv input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
-.loginForm button{
+.loginForm button {
     background-color: #858f9c;
     color: #fff;
     border: none;
-    padding: 0.5rem;
+    padding: 0.8rem;
     width: 150px;
     border-radius: 5rem;
-    margin: 2rem;
-    opacity: 1;
+    margin: 1.5rem 0;
     cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.3s;
 }
 
-.loginForm button{
-    opacity: 0.95;
-
-}
-
-.cadastreDiv{
-    
-    width: 30%;
-    text-align: center;
+.loginForm button:hover {
+    opacity: 0.9;
 }
 
 .cadastreDiv h2 {
-    color: black;    
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
-.cadastreDiv h3{
-    color: rgb(90, 90, 90);
 
+.cadastreDiv h3 {
+    color: rgb(90, 90, 90);
+    font-size: 1rem;
+    line-height: 1.4;
 }
-.cadastrarBtn{
+
+.cadastrarBtn {
     width: 150px;
-    margin-top: 3rem;
-    padding: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
     border-radius: 5rem;
     border: 2px solid black;
     background-color: #B8C5D6;
     cursor: pointer;
-    opacity: 1;
+    font-size: 1rem;
+    transition: all 0.3s;
 }
 
-.cadastrarBtn:hover{
-    opacity: 0.7;
+.cadastrarBtn:hover {
+    background-color: #a0b1c7;
+    opacity: 0.9;
 }
 
 .cadastrarBtn a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .homePage {
+        flex-direction: row;
+        max-width: 800px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .cadastreDiv {
+        width: 40%;
+        border-radius: 5px 0 0 5px;
+        order: 1;
+    }
+    
+    .formDiv {
+        width: 60%;
+        border-radius: 0 5px 5px 0;
+        order: 2;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .homePage {
+        width: 70%;
+        max-width: 1000px;
+    }
+    
+    .cadastreDiv {
+        width: 30%;
+    }
+    
+    .formDiv {
+        width: 70%;
+    }
+    
+    .formDiv input {
+        width: 280px;
+    }
+}
+
+/* Telas muito pequenas (celulares pequenos) */
+@media (max-width: 360px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .homePage {
+        padding: 0.5rem;
+        margin: 1rem auto;
+    }
+    
+    .cadastreDiv, .formDiv {
+        padding: 1rem;
+    }
+    
+    .cadastreDiv h2 {
+        font-size: 1.3rem;
+    }
+    
+    .cadastreDiv h3 {
+        font-size: 0.9rem;
+    }
+    
+    .formDiv input {
+        padding: 0.6rem;
+    }
+    
+    .loginForm button,
+    .cadastrarBtn {
+        width: 130px;
+        padding: 0.7rem;
+    }
 }
