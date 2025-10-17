@@ -53,17 +53,28 @@ const loadUser = () => {
             reps.innerText = `Repetições: ${exercise.reps}`
             peso.innerText = `Peso: ${exercise.weight}`
 
-            // Agora fazer os buttons que vai dentro da actions um edit ou delete
+            //  buttons que vai dentro da actions um edit ou delete
             treinoInfo.appendChild(nome)
             treinoInfo.appendChild(series)
             treinoInfo.appendChild(reps)
             treinoInfo.appendChild(peso)
 
+            const buttonEdit = document.createElement("button")
+            const deleteButton = document.createElement("button")
+            buttonEdit.classList.add("edit")
+            deleteButton.classList.add("delete")
+
+            buttonEdit.innerText = "Editar"
+            deleteButton.innerText = "Deletar"
 
             treinoCard.appendChild(h3)
+            cardActions.appendChild(buttonEdit)
+            cardActions.appendChild(deleteButton)
             treinoCard.appendChild(treinoInfo)
             treinoCard.appendChild(cardActions)
             divTreinos.appendChild(treinoCard)
+
+            // agora integrar essa pagina com o resto, dps fazer o login ou o cadastro o usuario vai vim pra ca
         })
 
 
