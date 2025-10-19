@@ -2,8 +2,8 @@ POST http://localhost:3000/user/cadastro
 Content-Type: application/json
 
 {
-    "name": "alex",
-    "email": "alex@gmail.com",
+    "name": "justin",
+    "email": "justin@gmail.com",
     "password": "12345"
 }
 

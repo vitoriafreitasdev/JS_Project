@@ -4,29 +4,15 @@ import webFetch from "../apifetch/webFetch.js"
 const divTreinos = document.getElementById("treino")
 let userExercises
 
-/*
-o que preciso fazer:
+const url = window.location.href
+const urlSPlit = url.split("?id=")
+const userId = urlSPlit[1]
 
-criar uma div, nome da classe dela => treino-card
-criar outra div, nome da classe dela => treino-info
-criar outra div, nome da classe dela => card-actions
--treino-info e card-actions vai dentro da treino-card
-
-dentro da treino-card, antes das divs vai um h3 com o nome do dia daquele treino 
- dentro da treino-info vai 4 p com as info de cada treino (nome, series, reps e peso)
-dentro de cada p dentro vai escrito: nome, serie, reps ou peso
-
-focar nisso => dentro da card-actions vai dois buttons, um com a class edit outro com a delete, escrito dentro do edit esta editar dentro do delete esta deletar
-
-a treino-card vai dentro da divTreinos
-
-*/
-
-
+// agora fazer o botão de adicionar treinos
+// ele ira levar o usuario para a pagina de adicionar treinos, o id do usuario tbm precisar estar na url dessa pagina
 const loadUser = () => {
-    webFetch("/user").then((data) => {
+    webFetch(`/user/${userId}`).then((data) => {
         userExercises = data.exercises 
-        console.log(userExercises)
 
         userExercises.map((exercise) => {
             // divs treino-card vai dentro da treino
@@ -74,7 +60,7 @@ const loadUser = () => {
             treinoCard.appendChild(cardActions)
             divTreinos.appendChild(treinoCard)
 
-            // agora integrar essa pagina com o resto, dps fazer o login ou o cadastro o usuario vai vim pra ca
+            
         })
 
 

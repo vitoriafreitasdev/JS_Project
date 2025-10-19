@@ -31,7 +31,7 @@ const UserController = {
             const response = await User.create(user)
             const id = response._id
             const token = jwt.sign({id: id}, secret)
-            res.status(201).json({msg: "Criado com sucesso", response, token})
+            res.status(201).json({msg: "Criado com sucesso", response, token, id})
 
         } catch (error) {
             console.log(error)
@@ -67,7 +67,7 @@ const UserController = {
     },
     getUser: async (req, res) => {
         try {
-            const id = req.userId
+            const id = req.params.id
             const user = await User.findById(id)
 
             if(!user) return res.status(404).json({msg: "Usuário não encontrado"})

@@ -16,6 +16,7 @@ loginBtn.addEventListener("click", (e) => {
         body: JSON.stringify(user)
     }).then((data) => {
         localStorage.setItem("token", data.token)
+        window.location.assign(`/frontend/userPage/userPage.html?id=${data.id}`)
     }).catch((error) => console.log(error))
 })
 
