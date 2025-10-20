@@ -1,0 +1,41 @@
+body{
+    background-color: #C0BCB5;
+}
+
+.main-div{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.main-div label{
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+
+.main-div input {
+    width: 70%;
+    padding: 0.2rem;
+}
+
+.addExerciseBtn{
+    width: 20%;
+    margin: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+}
+
+.addExerciseBtn:hover{
+    opacity: 0.8;
+}

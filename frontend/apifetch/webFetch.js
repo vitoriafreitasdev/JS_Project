@@ -10,9 +10,11 @@ export default async function webFetch(endpoint, opticoes = {}) {
 
     if(token) {
         headers["Authorization"] = `Bearer ${token}`
-    } else {
-        console.log("Nao tem token")
-    }
+    } 
+
+    const teste = { ...opticoes, headers}
+
+    console.log(teste)
     
     const respose = await fetch(`${url}${endpoint}`, {
         ...opticoes,
