@@ -2,6 +2,8 @@
 import webFetch from "../apifetch/webFetch.js"
 
 const divTreinos = document.getElementById("treino")
+const addBtn = document.getElementById("addBtn")
+
 let userExercises
 
 const url = window.location.href
@@ -68,3 +70,7 @@ const loadUser = () => {
 }
 
 loadUser()
+
+addBtn.addEventListener("click", () => {
+    window.location.assign(`/frontend/addExercises/addExercises.html?id=${userId}`)
+})

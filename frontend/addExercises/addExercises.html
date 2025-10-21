@@ -8,19 +8,20 @@
     <script type="module" src="add.js"></script>
 </head>
 <body>
-    <div class="main-div">
+    <form class="main-form" id="form">
         <label>Nome: </label>
-        <input type="text">
+        <input type="text" id="exerciseName" placeholder="Elevação lateral" required>
         <label>Series: </label>
-        <input type="number">
+        <input type="number" id="exerciseSeries" placeholder="12" required>
         <label>Repetição: </label>
-        <input type="number">
-        <label>Peso: </label>
-        <input type="text">
-        <label>Dia do treino: </label>
-        <input type="text">
-        <button class="addExerciseBtn">Adicionar</button>
-    </div>
+        <input type="number" id="exerciseReps" placeholder="8" required>
+        <label>Peso de cada lado: </label>
+        <input type="text" id="exerciseWeight" placeholder="8 kilos" required>
+        <label>Dia do treino na semana: </label>
+        <input type="text" id="exerciseDay" placeholder="segunda-feira" required>
+        <button class="addExerciseBtn" id="addExercise">Adicionar</button>
+        
+    </form>
     
 </body>
 </html>

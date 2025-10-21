@@ -2,7 +2,7 @@ body{
     background-color: #C0BCB5;
 }
 
-.main-div{
+.main-form{
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -17,12 +17,12 @@ body{
     border-radius: 5px;
 }
 
-.main-div label{
+.main-form label{
     font-weight: bolder;
     padding: 0.5rem;
 }
 
-.main-div input {
+.main-form input {
     width: 70%;
     padding: 0.2rem;
 }
