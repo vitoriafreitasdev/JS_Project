@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/user
+GET http://localhost:3000/user/:id
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDU1MjU5MH0.VxaT6HYkXbz-s1gaJT-qk_N0FZerI3wpfmcIhjbTaqU
 
 ###
@@ -37,8 +37,9 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/user/delete/68e917cf0f6cba740beab6a4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTkxNjhkMGY2Y2JhNzQwYmVhYjY4YiIsImlhdCI6MTc2MDEwNjEyN30.DzwpyQvl_gHIwkwMjNlM8RKjNGwC054cFs0UWtgYmFc
+
+DELETE http://localhost:3000/user/delete/68f8f385ded28c18ac789b43
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjhmMjYxZGVkMjhjMThhYzc4OWIxNSIsImlhdCI6MTc2MTE0NTQ0MX0.Z92pOVCP2R9uYCGFzgGf6wNJ5kVyOMh6-EX-WO-0kCg
 Content-Type: application/json
 
 ###

@@ -3,6 +3,7 @@ import webFetch from "../apifetch/webFetch.js"
 
 const divTreinos = document.getElementById("treino")
 const addBtn = document.getElementById("addBtn")
+const userMessage = document.getElementById("userMessage")
 
 let userExercises
 
@@ -10,8 +11,7 @@ const url = window.location.href
 const urlSPlit = url.split("?id=")
 const userId = urlSPlit[1]
 
-// agora fazer o botão de adicionar treinos
-// ele ira levar o usuario para a pagina de adicionar treinos, o id do usuario tbm precisar estar na url dessa pagina
+
 const loadUser = () => {
     webFetch(`/user/${userId}`).then((data) => {
         userExercises = data.exercises 
@@ -63,6 +63,19 @@ const loadUser = () => {
             divTreinos.appendChild(treinoCard)
 
             
+            // botão editar addEventListener
+
+            buttonEdit.addEventListener("click", () => {
+                window.location.assign(`/frontend/editExercises/editExercises.html?id=${exercise._id}`)
+            })
+
+            // botão deletar addEventListener
+
+            deleteButton.addEventListener("click", () => {
+                deleteExercise(exercise._id)
+            })
+
+
         })
 
 
@@ -70,6 +83,22 @@ const loadUser = () => {
 }
 
 loadUser()
+
+const deleteExercise = (exerciseId) => {
+    webFetch(`/user/delete/${exerciseId}`, {
+        method: "DELETE"
+    })
+    .then((data) => {
+
+        userMessage.innerText = `${data.msg}`
+        userMessage.style.color = "white"
+        setTimeout(function(){
+            window.location.reload()
+        }, 1000)
+
+    })
+    .catch(error => console.log(error))
+}
 
 addBtn.addEventListener("click", () => {
     window.location.assign(`/frontend/addExercises/addExercises.html?id=${userId}`)

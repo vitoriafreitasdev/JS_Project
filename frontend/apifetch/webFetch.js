@@ -12,10 +12,7 @@ export default async function webFetch(endpoint, opticoes = {}) {
         headers["Authorization"] = `Bearer ${token}`
     } 
 
-    const teste = { ...opticoes, headers}
 
-    console.log(teste)
-    
     const respose = await fetch(`${url}${endpoint}`, {
         ...opticoes,
         headers,

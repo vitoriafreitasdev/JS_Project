@@ -34,6 +34,11 @@ submitCadastro.addEventListener("click", (e) => {
         method: "POST",
         body: JSON.stringify(cadastroForm)
     }).then(data => {
+        const tokenLocalStorage = localStorage.getItem("token")
+
+        if(tokenLocalStorage) {
+            localStorage.removeItem("token")
+        }
         localStorage.setItem("token", data.token)
         window.location.assign(`/frontend/userPage/userPage.html?id=${data.id}`)
     }).catch(error => console.log(error))

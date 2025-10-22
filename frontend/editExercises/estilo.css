@@ -1,5 +1,5 @@
 body{
-    background-color: #C0BCB5;
+    background-color: #88847e;
 }
 
 .main-form{
@@ -27,15 +27,18 @@ body{
     padding: 0.5rem;
 }
 
-.addExerciseBtn{
+.editExerciseBtn{
     width: 20%;
     margin: 1rem;
     padding: 0.5rem;
     cursor: pointer;
     border: none;
     opacity: 1;
+    background-color: green;
+    border: none;
+    color: #fff;
 }
 
-.addExerciseBtn:hover{
+.editExerciseBtn{
     opacity: 0.8;
 }
