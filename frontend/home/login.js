@@ -3,6 +3,7 @@ import webFetch from "../apifetch/webFetch.js";
 const emailInput = document.getElementById("emailInput")
 const senhaInput = document.getElementById("senhaInput")
 const loginBtn = document.getElementById("loginBtn")
+const userMessage = document.getElementById("userMessage")
 
 loginBtn.addEventListener("click", (e) => {
     e.preventDefault()
@@ -15,6 +16,11 @@ loginBtn.addEventListener("click", (e) => {
         method: "POST",
         body: JSON.stringify(user)
     }).then((data) => {
+
+        if(data.msg === "Senha errada."){
+            return userMessage.innerText = `${data.msg}`
+        }
+
         const tokenLocalStorage = localStorage.getItem("token")
 
         if(tokenLocalStorage) {

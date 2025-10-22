@@ -49,7 +49,7 @@ const UserController = {
                 return res.status(422).json({msg: "Usuário não encontrado."})
             }
 
-            const passwordCheck = bcrypt.compare(password, user.password)
+            const passwordCheck = await bcrypt.compare(password, user.password)
 
             if(!passwordCheck){
                 return res.status(422).json({msg: "Senha errada."})
