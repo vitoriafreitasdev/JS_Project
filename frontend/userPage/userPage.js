@@ -10,7 +10,7 @@ let userExercises
 const url = window.location.href
 const urlSPlit = url.split("?id=")
 const userId = urlSPlit[1]
-// testes
+
 const loadUser = () => {
     webFetch(`/user/${userId}`).then((data) => {
         userExercises = data.exercises 
