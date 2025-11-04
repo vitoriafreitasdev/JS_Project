@@ -18,7 +18,15 @@
         <label>Peso de cada lado (ou total): </label>
         <input type="text" id="exerciseWeight" placeholder="8 kilos" required>
         <label>Dia do treino na semana: </label>
-        <input type="text" id="exerciseDay" placeholder="segunda-feira" required>
+        <select id="exerciseDay">
+            <option value="segunda">segunda-feira</option>
+            <option value="terça">terça-feira</option>
+            <option value="quarta">quarta-feira</option>
+            <option value="quinta">quinta-feira</option>
+            <option value="sexta">sexta-feira</option>
+            <option value="sábado">sábado</option>
+            <option value="domingo">domingo</option>
+        </select required>
         <button class="addExerciseBtn" id="addExercise">Adicionar</button>
         <p id="user-alert"> </p>
     </form>

@@ -24,8 +24,16 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.home-btn{
+    padding: 0.5rem;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+}
 .page-header h1 {
     color: #1E2D2F;
     font-size: 2rem;
@@ -41,12 +49,30 @@ body {
     border-radius: 10px;
     gap: 1.5rem;
 }
+.day-title{
+    color: #fff;
+    margin: 1rem;
+    border-bottom: 2px solid #fff;
+    
+}
+.segunda{ background-color: rgba(128, 0, 128, 0.521);}
+.terca{ background-color: rgba(255, 0, 0, 0.568);}
+.quarta{ background-color: rgba(0, 0, 255, 0.541);}
+.quinta{ background-color: rgba(255, 166, 0, 0.575);}
+.sexta{ background-color: rgba(0, 128, 0, 0.541);}
+.sabado{ background-color: rgba(137, 43, 226, 0.514);}
+.domingo{ background-color: rgba(255, 255, 0, 0.527);}
 
-.divTreinos {
-    display: grid;
+
+.segunda, .terca, .quarta, .quinta, .sexta, .sabado, .domingo {
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
     width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+
 }
 
 .treino-card {
