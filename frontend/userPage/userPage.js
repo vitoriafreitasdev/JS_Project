@@ -11,6 +11,17 @@ const url = window.location.href
 const urlSPlit = url.split("?id=")
 const userId = urlSPlit[1]
 
+// divs de cada dia da semana
+const segunda = document.getElementById("segunda")
+const terca = document.getElementById("terca")
+const quarta = document.getElementById("quarta")
+const quinta = document.getElementById("quinta")
+const sexta = document.getElementById("sexta")
+const sabado = document.getElementById("sabado")
+const domingo = document.getElementById("domingo")
+
+// Dentro do map, depois de criar o treinoCard, adicione:
+
 const loadUser = () => {
     webFetch(`/user/${userId}`).then((data) => {
         userExercises = data.exercises 
@@ -59,7 +70,43 @@ const loadUser = () => {
             cardActions.appendChild(deleteButton)
             treinoCard.appendChild(treinoInfo)
             treinoCard.appendChild(cardActions)
-            divTreinos.appendChild(treinoCard)
+           
+            if(exercise.day === "segunda" || exercise.day === "segunda-feira"){
+                segunda.style.display = "grid"
+                segunda.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "terça" || exercise.day === "terça-feira"){
+                terca.style.display = "grid"
+                terca.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "quarta" || exercise.day === "quarta-feira"){
+                quarta.style.display = "grid"
+                quarta.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "quinta" || exercise.day === "quinta-feira"){
+                quinta.style.display = "grid"
+                quinta.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "sexta" || exercise.day === "sexta-feira"){
+                sexta.style.display = "grid"
+                sexta.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "sábado" || exercise.day === "sábado"){
+                sabado.style.display = "grid"
+                sabado.appendChild(treinoCard)
+            }
+
+            if(exercise.day === "domingo" || exercise.day === "domingo"){
+                domingo.style.display = "grid"
+                domingo.appendChild(treinoCard)
+            }
+
+           //divTreinos.appendChild(treinoCard)
 
             
             // botão editar addEventListener

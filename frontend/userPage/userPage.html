@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,11 +10,18 @@
 </head>
 <body>
     <div class="userPage-MainDiv">
-        <header class="page-header">
-            <h1>Seus treinos</h1>
-        </header>
+        <button class="home-btn">
+                <a href="../home/home.html"><img src="img/home.png" alt="home image"></a>
+        </button>
 
+        <header class="page-header">
+            <h1>Seus treinos registrados</h1>
+            <div class="div-BtnAddTreinos">
+                <button class="add-btn" id="addBtn">+ Adicionar treino</button>
+            </div>
+        </header>
         <div class="container">
+            
             <p id="userMessage"></p>
             <div id="treino" class="divTreinos">
                 <!-- Adicionar por JS -->
@@ -32,14 +40,25 @@
                     </div>
                 </div>  
                 -->
-
-
+                <h3 class="day-title">Segunda-feira</h3>
+                <div class="segunda" id="segunda"></div>
+                <h3 class="day-title">Terça-feira</h3>
+                <div class="terca" id="terca"></div>
+                <h3 class="day-title">Quarta-feira</h3>
+                <div class="quarta" id="quarta"></div>
+                <h3 class="day-title">Quinta-feira</h3>
+                <div class="quinta" id="quinta"></div>
+                <h3 class="day-title">Sexta-feira</h3>
+                <div class="sexta" id="sexta"></div>
+                <h3 class="day-title">Sábado</h3>
+                <div class="sabado" id="sabado"></div>
+                <h3 class="day-title">Domingo</h3>
+                <div class="domingo" id="domingo"></div>
+              
 
             </div>
 
-            <div class="div-BtnAddTreinos">
-                <button class="add-btn" id="addBtn">+ Adicionar treino</button>
-            </div>
+            
         </div>
     </div>
 </body>

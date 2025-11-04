@@ -33,6 +33,8 @@ addExercise.addEventListener("click", (e) => {
             day: exerciseDay.value
         }
 
+        console.log(exercise)
+
         webFetch(`/user/addExercise/${userId}`, {
             method: "POST",
             body: JSON.stringify(exercise)
